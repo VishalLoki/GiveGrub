@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/primary_the_darkest_color" android:state_enabled="true" /> <!-- Enabled state color -->
+    <item android:color="@color/lite_grey" android:state_enabled="false" /> <!-- Disabled state color -->
+</selector>

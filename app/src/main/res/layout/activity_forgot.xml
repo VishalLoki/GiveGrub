@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:padding="24dp"
+    tools:context=".register.forget.ForgotActivity">
+
+    <!-- Forgot Password Heading -->
+    <TextView
+        android:id="@+id/forgot_password_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forget_password"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_the_darkest_color"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:paddingBottom="16dp" />
+
+    <!-- Subheading -->
+    <TextView
+        android:id="@+id/email_sent_subheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/we_ve_sent_you_a_link_to_reset_your_password"
+        android:textSize="16sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/primary_the_darkest_color"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="32dp" />
+
+    <!-- Resend Email Button -->
+    <Button
+        android:id="@+id/resend_email_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resend_verification_email"
+        android:backgroundTint="@color/button_state"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Countdown Timer TextView -->
+    <TextView
+        android:id="@+id/timer_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_00_60"
+        android:textSize="18sp"
+        android:textColor="@color/primary_the_darkest_color"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp" />
+
+    <TextView
+        android:id="@+id/password_changed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_password_has_been_changed_successfully"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/primary_the_darkest_color"
+        android:visibility="visible"
+        android:layout_marginTop="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/primary_the_darkest_color"/>
+
+</LinearLayout>

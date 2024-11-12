@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="2dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <!-- User Info and Timestamp -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:paddingBottom="4dp">
+
+            <!-- Username -->
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Username"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_the_darkest_color" />
+
+            <!-- Timestamp -->
+            <TextView
+                android:id="@+id/timestampTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Timestamp"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <!-- Image -->
+        <ImageView
+            android:id="@+id/feedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/feed2" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description goes here"
+            android:textSize="15sp"
+            android:paddingTop="8dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <!-- Food Item, Venue, and People Count -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:paddingBottom="8dp">
+
+            <!-- Food Item -->
+            <TextView
+                android:id="@+id/foodItemTextView"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Food Item"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_the_darkest_color" />
+
+            <!-- Venue -->
+            <TextView
+                android:id="@+id/venueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Venue"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_the_darkest_color"/>
+
+            <!-- People Count -->
+            <TextView
+                android:id="@+id/peopleCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="People Count"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_the_darkest_color" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

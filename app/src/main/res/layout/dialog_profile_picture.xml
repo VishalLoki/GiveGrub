@@ -1,0 +1,24 @@
+<!-- dialog_profile_picture.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2.5dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:padding="2.5dp"
+        android:background="@color/primary_the_darkest_color"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/dialogProfileImageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/profile_picture" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

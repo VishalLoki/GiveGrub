@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/dialog_rounded_corners">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Details"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/primary_the_darkest_color"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="10dp" />
+
+    <EditText
+        android:id="@+id/foodEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_food_item"
+        android:textColor="@color/primary_the_darkest_color"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/venueEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_venue"
+        android:textColor="@color/primary_the_darkest_color"
+        android:padding="10dp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/peopleCountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/number_of_people"
+        android:inputType="number"
+        android:textColor="@color/primary_the_darkest_color"
+        android:padding="10dp"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/primary_the_darkest_color"
+        android:textColor="@android:color/white"
+        android:text="Send" />
+</LinearLayout>

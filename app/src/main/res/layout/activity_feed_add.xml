@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feed.addFeed.FeedAddActivity">
+
+    <!-- AppBar (Toolbar) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_the_darkest_color"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="3dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back_button"
+                android:src="@drawable/back"
+                android:scaleType="centerInside"/>
+
+            <!-- Center Title -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/backBtn"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:text="@string/upload_feeds"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Content ScrollView -->
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Photo Preview -->
+            <ImageView
+                android:id="@+id/photoPreview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="12dp"
+                android:scaleType="centerCrop"
+                android:background="@android:color/darker_gray"
+                android:contentDescription="@string/photopreview"/>
+
+            <!-- Upload Photo Button -->
+            <Button
+                android:id="@+id/uploadPhotoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/upload_photo"
+                android:backgroundTint="@color/primary_the_darkest_color"
+                android:textColor="@android:color/white"/>
+
+            <!-- Description Field -->
+            <EditText
+                android:id="@+id/descriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/primary_the_darkest_color"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:minLines="3"/>
+
+            <!-- Food Item Field -->
+            <EditText
+                android:id="@+id/foodItemEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/food_item"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/primary_the_darkest_color"
+                android:inputType="text"/>
+
+            <!-- Venue Field -->
+            <EditText
+                android:id="@+id/venueEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/venue"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/primary_the_darkest_color"
+                android:inputType="text"/>
+
+            <!-- People Count Field -->
+            <EditText
+                android:id="@+id/peopleCountEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/peoplecount"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/primary_the_darkest_color"
+                android:inputType="text"/>
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/primary_the_darkest_color"
+                android:textColor="@android:color/white"/>
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/primary_the_darkest_color"/>
+</RelativeLayout>

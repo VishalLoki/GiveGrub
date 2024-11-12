@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainactivity.MainActivity">
+
+    <!-- AppBar (Toolbar) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_the_darkest_color"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <!-- Center Title -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/toolbar_title"
+                android:layout_marginEnd="25dp"
+                android:orientation="horizontal">
+
+                <!-- Right Notification Icon -->
+                <ImageButton
+                    android:id="@+id/orderHistoryIcon"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="end"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="50dp"
+                    android:padding="5.5dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/order_history"
+                    android:src="@drawable/ic_order_history"
+                    android:scaleType="centerInside"/>
+                <ImageButton
+                    android:id="@+id/settings_icon"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="end"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="5.5dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/settings"
+                    android:src="@drawable/ic_settings"
+                    android:scaleType="centerInside"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Main Content to hold fragments -->
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/toolbar"/>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary_the_darkest_color"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
+        app:itemBackground="@color/bottom_nav_item_background"
+        app:itemIconSize="27dp"
+        app:itemIconTint="@color/white"
+        app:itemRippleColor="@color/primary_the_darkest_color"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="VisualLintBottomNav"/>
+
+</RelativeLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.ProfileActivity">
+
+    <!-- AppBar (Toolbar) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_the_darkest_color"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="3dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/back_button"
+                android:src="@drawable/back"
+                android:scaleType="centerInside"/>
+
+            <!-- Center Title -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/back_btn"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:text="@string/settings"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Profile Picture and Update Button -->
+    <RelativeLayout
+        android:id="@+id/dp_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/view"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/profile_picture_with_border_main">
+
+                    <ImageView
+                        android:id="@+id/profile_icon"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="15dp"
+                        android:contentDescription="@string/profile_picture"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/defdp"
+                        android:layout_margin="5dp"
+                        android:clipToOutline="true"
+                        android:background="@drawable/profile_picture_with_border_main"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- Update Profile Picture Button -->
+            <Button
+                android:id="@+id/update_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text="@string/update_profile_picture"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/primary_the_darkest_color"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- User Details (Username and Email) -->
+    <LinearLayout
+        android:id="@+id/username_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/dp_layout"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name_placeholder"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_the_darkest_color"/>
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email_placeholder"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:textColor="@color/primary_the_darkest_color"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_order_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username_layout"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/order_history"
+        android:textColor="@android:color/white"
+        android:gravity="start|center_vertical"
+        android:drawableStart="@drawable/ic_order_history"
+        android:drawablePadding="8dp"
+        android:padding="12dp"
+        android:backgroundTint="@color/primary_the_darkest_color"
+        android:elevation="4dp" />
+
+    <!-- Sign Out Button at the Bottom Center -->
+    <Button
+        android:id="@+id/btn_sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="@string/signout"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:backgroundTint="@color/primary_the_darkest_color"
+        android:elevation="4dp"/>
+
+</RelativeLayout>

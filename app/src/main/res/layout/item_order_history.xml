@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="5dp"
+    android:elevation="1dp"
+    android:clipToPadding="false">
+
+    <!-- Order Title -->
+    <TextView
+        android:id="@+id/orderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Title"
+        android:textColor="@color/primary_the_darkest_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Food Donor -->
+    <TextView
+        android:id="@+id/orderFoodDonorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Food Donor : Sample Venue"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"/>
+
+    <!-- Venue -->
+    <TextView
+        android:id="@+id/orderVenue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Venue: Sample Venue"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"/>
+
+    <!-- People Count -->
+    <TextView
+        android:id="@+id/orderPeopleCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="People: 4"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"/>
+
+    <!-- Timestamp -->
+    <TextView
+        android:id="@+id/orderTimestamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12:30 PM"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="end"
+        android:textSize="12sp"/>
+</LinearLayout>

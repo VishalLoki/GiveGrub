@@ -1,0 +1,118 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".register.signup.SignUpUsernameActivity">
+
+    <!-- Main Heading -->
+    <TextView
+        android:id="@+id/main_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="@string/username"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_the_darkest_color" />
+
+    <!-- Subheading -->
+    <TextView
+        android:id="@+id/subheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_heading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/choose_a_unique_user_id"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="@color/primary_the_darkest_color" />
+
+    <!-- Container for Email Field -->
+    <LinearLayout
+        android:id="@+id/credentials_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subheading"
+        android:layout_marginTop="52dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical">
+
+        <!-- Username Field -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/email_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/user_icon"
+                android:src="@drawable/ic_person" />
+
+            <EditText
+                android:id="@+id/editTextUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/email_icon"
+                android:layout_marginStart="8dp"
+                android:hint="@string/sample_user_name"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="@drawable/edit_text_background"
+                android:importantForAutofill="yes"
+                android:autofillHints="emailAddress"
+                android:textColor="@color/lite_black"
+                android:textColorHint="@color/hint_green" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/sign_up_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credentials_container"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/primary_the_darkest_color"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textAllCaps="false" />
+
+    <!-- Already Have an Account Text -->
+    <TextView
+        android:id="@+id/already_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="@string/already_have_an_account_login"
+        android:textColor="@color/primary_the_darkest_color"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:padding="8dp" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/primary_the_darkest_color" /> <!-- Set to your primary darkest color -->
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GiveGrub2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!--Primary brand color-->
+        <item name="colorPrimary">@color/primary_the_darkest_color</item>
+        <item name="colorPrimaryVariant">@color/primary_the_darkest_color</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!--Secondary brand color-->
+        <item name="colorSecondary">@color/primary_the_darkest_color</item>
+        <item name="colorSecondaryVariant">@color/primary_the_darkest_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!--status bar color-->
+        <item name="android:statusBarColor">@color/primary_the_darkest_color</item>
+
+        <!--window background color-->
+        <item name="android:windowBackground">@color/white</item>
+
+    </style>
+</resources>

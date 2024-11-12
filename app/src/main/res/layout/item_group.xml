@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginRight="3dp"
+    android:layout_marginLeft="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/view"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/profile_picture_with_border_main">
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="15dp"
+                android:contentDescription="@string/profile_picture"
+                android:scaleType="centerCrop"
+                android:src="@drawable/defdp"
+                android:layout_margin="5dp"
+                android:clipToOutline="true"
+                android:background="@drawable/profile_picture_with_border"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/groupNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="@color/primary_the_darkest_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lastMessageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last message"
+                android:textSize="13sp"
+                android:textStyle="italic"
+                android:textColor="@color/lite_black"
+                android:layout_marginTop="4dp" /> <!-- Margin for spacing -->
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Unread message indicator -->
+            <TextView
+                android:id="@+id/unreadCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/unread_message_badge"
+                android:layout_centerHorizontal="true"
+                android:padding="4dp"
+                android:text="3"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:visibility="visible" />  <!-- Initially visible -->
+
+            <TextView
+                android:id="@+id/timestampTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/unreadCountTextView"
+                android:layout_marginTop="6dp"
+                android:text="Mon 12:30"
+                android:textSize="10sp"
+                android:textColor="@android:color/darker_gray" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

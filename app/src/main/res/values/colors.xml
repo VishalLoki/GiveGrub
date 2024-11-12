@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lite_white">#E7EBE7</color>
+
+    <color name="lite_black">#1F1C1C</color>
+    <color name="lite_grey">#BEC8BE</color>
+
+<!--    <color name="my_primary">#FBC82B</color>-->
+<!--    <color name="my_secondary">#FFF9F6EF</color>-->
+
+    <color name="primary_color">#73EC8B</color>
+    <color name="secondary_color">#D2FF72</color>
+
+<!--    <color name="off_white">#FDFDFD</color>-->
+<!--    <color name="light_grey">#C3C3C3</color>-->
+
+    <color name="primary_dark_color">#54C392</color>
+    <color name="primary_darker_color">#15B392</color>
+
+    <color name="primary_the_darkest_color">#008037</color>
+    <color name="hint_green">#A5D6A7</color>
+    <color name="primary_lite">#39A065</color>
+
+</resources>
